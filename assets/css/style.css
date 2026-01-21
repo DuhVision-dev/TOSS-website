@@ -1,0 +1,9 @@
+/* style.css — imports other css modules */
+@import "variables.css";
+@import "base.css";
+@import "layout.css";
+@import "components.css";
+@import "sections.css";
+
+/* Theme-specific tweaks */
+body { background: var(--color-bg, #f8fafc); }

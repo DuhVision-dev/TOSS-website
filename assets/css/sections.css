@@ -1,0 +1,6 @@
+/* sections.css — hero, why-us, etc */
+
+.section { padding: 4rem 0; }
+.hero { display: grid; align-items: center; gap: 2rem; }
+
+.cta { text-align: center; }

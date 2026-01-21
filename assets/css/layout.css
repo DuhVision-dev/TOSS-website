@@ -1,0 +1,8 @@
+/* layout.css — grid and layout helpers */
+
+.row { display: flex; flex-wrap: wrap; gap: 1rem; }
+.col { flex: 1 1 0; }
+
+.header, .footer { background: var(--color-bg, #fff); }
+
+.site-inner { min-height: 60vh; padding: 2rem 0; }
