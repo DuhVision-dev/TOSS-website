@@ -176,7 +176,7 @@
 
     <button class="menu-toggle" aria-label="Toggle menu">
       Menu
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/Menu.svg" alt="Menu">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/menu.svg" alt="Menu">
     </button>
 
     

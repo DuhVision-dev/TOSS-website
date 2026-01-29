@@ -74,7 +74,7 @@ $products_query = new WP_Query($args);
     </div>
     
     <button class="mobile-category-toggle" aria-label="Toggle categories">
-     <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/Categories.svg'; ?>" alt="">
+     <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/categories.svg'; ?>" alt="">
     </button>
   </div>
   

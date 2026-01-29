@@ -10,7 +10,7 @@
         <div class="carousel-track">
           <div class="carousel-card">
             <div class="product-card-image">
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/Router.webp'; ?>" alt="Routers Machines">
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/router.webp'; ?>" alt="Routers Machines">
             </div>
             <div class="product-card-content">
               <h3 class="product-card-title">Routers Machines</h3>
@@ -23,7 +23,7 @@
           </div>
           <div class="carousel-card">
             <div class="product-card-image">
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/Co2-Laser-machine.webp'; ?>" alt="Routers Machines">
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/co2-laser-machine.webp'; ?>" alt="Routers Machines">
             </div>
             <div class="product-card-content">
               <h3 class="product-card-title">Co2 Laser Machines</h3>
@@ -36,7 +36,7 @@
           </div>
           <div class="carousel-card">
             <div class="product-card-image">
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/Fiber-Laser-Machine.webp'; ?>" alt="Routers Machines">
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/fiber-laser-machine.webp'; ?>" alt="Routers Machines">
             </div>
             <div class="product-card-content">
               <h3 class="product-card-title">Fiber Metal Laser Machine</h3>
@@ -49,7 +49,7 @@
           </div>
           <div class="carousel-card">
             <div class="product-card-image">
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/Chaneel-Bending.webp'; ?>" alt="Routers Machines">
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/chaneel-bending.webp'; ?>" alt="Routers Machines">
             </div>
             <div class="product-card-content">
               <h3 class="product-card-title">Channel Letter Bending Machine</h3>
