@@ -1,0 +1,31 @@
+:root {
+
+  /* Colors */
+  --color-black: #060410;
+  --color-faded-bluie: #D5D5EB;
+  --color-gray: #F3F3F8;
+ 
+
+  /* Brand */
+  --color-primary: #3647FF;
+  --color-stroke: #F6F6F9;
+  --color-sub-head: #515151;
+
+  /* Typography */
+  --font-body:  "Montserrat", sans-serif;
+  --font-heading: "adriane", serif;
+
+  /* Font sizes */
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 48px;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 120px;
+
+}

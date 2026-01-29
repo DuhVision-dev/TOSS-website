@@ -1,0 +1,76 @@
+<?php
+// parts/featured-products.php — Products preview
+?>
+<section id="products" class="products-preview section">
+  <div class="featured-products container">
+    <h2>Featured Products</h2>
+    
+    <div class="carousel-wrapper">
+      <div class="carousel-track-container">
+        <div class="carousel-track">
+          <div class="carousel-card">
+            <div class="product-card-image">
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/Router.webp'; ?>" alt="Routers Machines">
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-title">Routers Machines</h3>
+              <?php $text = 'Learn More';
+              $url = home_url('#');
+              $type = 'primary';
+              include get_template_directory() . '/components/button.php';
+              ?>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <div class="product-card-image">
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/Co2-Laser-machine.webp'; ?>" alt="Routers Machines">
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-title">Co2 Laser Machines</h3>
+              <?php $text = 'Learn More';
+              $url = home_url('#');
+              $type = 'primary';
+              include get_template_directory() . '/components/button.php';
+              ?>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <div class="product-card-image">
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/Fiber-Laser-Machine.webp'; ?>" alt="Routers Machines">
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-title">Fiber Metal Laser Machine</h3>
+              <?php $text = 'Learn More';
+              $url = home_url('#');
+              $type = 'primary';
+              include get_template_directory() . '/components/button.php';
+              ?>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <div class="product-card-image">
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/Chaneel-Bending.webp'; ?>" alt="Routers Machines">
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-title">Channel Letter Bending Machine</h3>
+              <?php $text = 'Learn More'; 
+              $url = home_url('#');
+              $type = 'primary'; 
+              include get_template_directory() . '/components/button.php';
+              ?>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="carousel-controls">
+      <button class="carousel-btn carousel-btn-prev" aria-label="Previous">
+        Left
+      </button>
+      <button class="carousel-btn carousel-btn-next" aria-label="Next">
+        Right
+      </button>
+    </div>
+    
+  </div>
+</section> 

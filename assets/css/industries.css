@@ -1,0 +1,29 @@
+.industry-hero{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.industry-hero .hero-text{
+    max-width: 600px;
+}
+
+@media (max-width: 779px) {
+  
+
+    .industry-hero{
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+  
+
+
+}
+
+
+@media (max-width: 430px) {
+  
+}

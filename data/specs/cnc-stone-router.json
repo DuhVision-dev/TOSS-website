@@ -1,0 +1,20 @@
+{
+  "product_sku": "DTS-1325",
+  "attributes": {
+    "pa_xy-axis-working-area": "1300 × 2500 mm",
+    "pa_z-axis-working-area": ">200 mm",
+    "pa_spindle-power": "3 kW / 6 kW",
+    "pa_max-working-speed": "20,000 mm/sec",
+    "pa_max-engraving-speed": "8000–15000 mm/min",
+    "pa_resolution": "0.005 mm",
+    "pa_repositioning-accuracy": "0.05 mm",
+    "pa_command-format": "G Code (*.u00, *.mmg, *.plt)",
+    "pa_software-surroundings": "Windows 98 / 2000 / XP",
+    "pa_power-without-spindle": "1500 W",
+    "pa_power-supply": "AC 380V / AC 220V / 50Hz",
+    "pa_spindle-power-options": "2.2 / 3 / 4.5 / 5.5 kW",
+    "pa_spindle-speed": "0–18000 rpm",
+    "pa_work-mode": "Stepper",
+    "pa_controller": "DSP"
+  }
+}

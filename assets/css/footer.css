@@ -1,0 +1,208 @@
+/* ===================================
+   FOOTER STYLES
+   =================================== */
+
+.site-footer {
+  background-color: #FFFCF6;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===================================
+   FOOTER TOP - Main Content
+   =================================== */
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 4rem 0 3rem;
+  border-bottom: 0.5px solid #8C8472;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+/* ===================================
+   BRAND COLUMN - Logo & Social
+   =================================== */
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-logo img {
+  width: 120px;
+  height: auto;
+}
+
+.footer-social {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  max-width: 100px;
+  margin-left: 0.5rem;
+
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 40px; */
+  /* height: 40px; */
+  border-radius: 50%;
+  background-color: /* ADD SOCIAL ICON BACKGROUND COLOR */;
+  transition: background-color 0.3s ease;
+}
+
+
+.social-icon img {
+  /* width: 20px; */
+  /* height: 20px; */
+}
+
+/* ===================================
+   FOOTER HEADINGS
+   =================================== */
+
+.footer-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color:var(--color-black);
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+/* ===================================
+   FOOTER LINKS
+   =================================== */
+
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links li a,
+.footer-contact li,
+.footer-contact li a {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-black);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover,
+.footer-contact li a:hover {
+  color: var(--color-primary);
+}
+
+/* ===================================
+   FOOTER MIDDLE - Policy Links
+   =================================== */
+
+.footer-middle {
+  padding: 2rem 0;
+}
+
+.policy-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.policy-links a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-black);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.policy-links a:hover {
+  color: var(--color-primary);
+}
+
+/* ===================================
+   FOOTER BOTTOM - Copyright
+   =================================== */
+
+.footer-bottom {
+  background-color: #06060E;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  /* margin: 0 -2rem; */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+  width: 100%;
+  color: white;
+}
+
+/* ===================================
+   RESPONSIVE - TABLET
+   =================================== */
+
+@media (max-width: 1024px) {
+  .footer-top {
+    gap: 2rem;
+  }
+  
+  .footer-col {
+    min-width: 150px;
+  }
+}
+
+/* ===================================
+   RESPONSIVE - MOBILE
+   =================================== */
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 3rem 0 2rem;
+  }
+  
+  .footer-brand {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-col {
+    text-align: center;
+  }
+  
+  .footer-links,
+  .footer-contact {
+    align-items: center;
+  }
+  
+  .policy-links {
+    gap: 1rem;
+  }
+  
+  .footer-middle {
+    padding: 1.5rem 0;
+  }
+}
