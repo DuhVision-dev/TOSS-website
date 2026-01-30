@@ -35,69 +35,77 @@
           <div class="alt-mobile-dropdown-menu">
             <!-- Sub-nav-list -->
             <div class="alt-sub-nav">
-              <a href="#" class="alt-mobile-link">Routers</a>
+              <a href="<?php echo esc_url(add_query_arg('product_cat', 'routers', home_url('/products'))); ?>" class="alt-mobile-link">Routers</a>
               <ul class="alt-sub-nav-links">
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">Wood Working</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">Stone Working</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">4-Axis</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">5-Axis</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(add_query_arg('product_cat', 'wood-working', home_url('/products'))); ?>" class="alt-mobile-sub-link">Wood Working</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/wood-working-1325')); ?>" class="alt-mobile-sub-link">1325</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/wood-working-1530')); ?>" class="alt-mobile-sub-link">1530</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/wood-working-1560')); ?>" class="alt-mobile-sub-link">1560</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(add_query_arg('product_cat', 'stone-working', home_url('/products'))); ?>" class="alt-mobile-sub-link">Stone Working</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/stone-working-router-1325')); ?>" class="alt-mobile-sub-link">1325</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/stone-working-router-1530')); ?>" class="alt-mobile-sub-link">1530</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/stone-working-router-1560')); ?>" class="alt-mobile-sub-link">1560</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(add_query_arg('product_cat', '4-axis', home_url('/products'))); ?>" class="alt-mobile-sub-link">4-Axis</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/4-axis-router-1530')); ?>" class="alt-mobile-sub-link">1530</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/4-axis-1550')); ?>" class="alt-mobile-sub-link">1550</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(add_query_arg('product_cat', '5-axis', home_url('/products'))); ?>" class="alt-mobile-sub-link">5-Axis</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/5-axis-router')); ?>" class="alt-mobile-sub-link">5-Axis Router</a></li>
               </ul>
             </div>
             <!-- Sub-nav-list -->
             <div class="alt-sub-nav">
-              <a href="#" class="alt-mobile-link">Co2 Laser</a>
+              <a href="<?php echo esc_url(add_query_arg('product_cat', 'co2-laser', home_url('/products'))); ?>" class="alt-mobile-link">CO2 Laser</a>
               <ul class="alt-sub-nav-links">
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">1410</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">1325</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">1530</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/co2-laser-1410')); ?>" class="alt-mobile-sub-link">1410</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/co2-laser-26')); ?>" class="alt-mobile-sub-link">1325</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/co2-laser-1530')); ?>" class="alt-mobile-sub-link">1530</a></li>
               </ul>
             <!-- Sub-nav-list -->
             </div><div class="alt-sub-nav">
-              <a href="#" class="alt-mobile-link">Fiber Metal Laser</a>
+              <a href="<?php echo esc_url(add_query_arg('product_cat', 'fiber-metal-laser', home_url('/products'))); ?>" class="alt-mobile-link">Fiber Metal Laser</a>
               <ul class="alt-sub-nav-links">
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">1530</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">2040</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/fiber-metal-laser-1530')); ?>" class="alt-mobile-sub-link">1530</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/fiber-metal-laser-2040')); ?>" class="alt-mobile-sub-link">2040</a></li>
               </ul>
             <!-- Sub-nav-list -->
             </div><div class="alt-sub-nav">
-              <a href="#" class="alt-mobile-link">CO2 Marker</a>
+              <a href="<?php echo esc_url(add_query_arg('product_cat', 'co2-marker', home_url('/products'))); ?>" class="alt-mobile-link">CO2 Marker</a>
               <ul class="alt-sub-nav-links">
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">150 × 150</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">200 × 200</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">300 × 300</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/co2-marker-150-x-150')); ?>" class="alt-mobile-sub-link">150 × 150</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/co2-marker-200-x-200')); ?>" class="alt-mobile-sub-link">200 × 200</a></li>
               </ul>
             <!-- Sub-nav-list -->
             </div><div class="alt-sub-nav">
-               <a href="#" class="alt-mobile-link">Spot Welding</a>
+               <a href="<?php echo esc_url(add_query_arg('product_cat', 'spot-welding', home_url('/products'))); ?>" class="alt-mobile-link">Spot Welding</a>
               <ul class="alt-sub-nav-links">
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">300W</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">500W</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/spot-welding-300w')); ?>" class="alt-mobile-sub-link">300W</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/spot-welding-500w')); ?>" class="alt-mobile-sub-link">500W</a></li>
               </ul>
             <!-- Sub-nav-list -->
             </div><div class="alt-sub-nav">
-              <a href="#" class="alt-mobile-link">Fiber Laser Welding</a>
+              <a href="<?php echo esc_url(add_query_arg('product_cat', 'fiber-laser-welding', home_url('/products'))); ?>" class="alt-mobile-link">Fiber Laser Welding</a>
               <ul class="alt-sub-nav-links">
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">1500W</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">2000W</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">3000W</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/fiber-laser-welding-1500w')); ?>" class="alt-mobile-sub-link">1500W</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/fiber-laser-welding-2000w')); ?>" class="alt-mobile-sub-link">2000W</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/fiber-laser-welding-3000w')); ?>" class="alt-mobile-sub-link">3000W</a></li>
               </ul>
             </div>
             <!-- Sub-nav-list -->
             <div class="alt-sub-nav">
-              <a href="#" class="alt-mobile-link">Sheet Bending Machine</a>
+              <a href="<?php echo esc_url(add_query_arg('product_cat', 'sheet-bending-machine', home_url('/products'))); ?>" class="alt-mobile-link">Sheet Bending Machine</a>
               <ul class="alt-sub-nav-links">
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">100 Tons</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">160 Tons</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">200 Tons</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/sheet-bending-machine-100-tons')); ?>" class="alt-mobile-sub-link">100 Tons</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/sheet-bending-machine-160-tons')); ?>" class="alt-mobile-sub-link">160 Tons</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/sheet-bending-machine-200-tons')); ?>" class="alt-mobile-sub-link">200 Tons</a></li>
               </ul>
             </div>
             <!-- Sub-nav-list -->
             <div class="alt-sub-nav">
-              <a href="#" class="alt-mobile-link">Channel Letter Bending</a>
+              <a href="<?php echo esc_url(add_query_arg('product_cat', 'channel-letter-bending', home_url('/products'))); ?>" class="alt-mobile-link">Channel Letter Bending</a>
               <ul class="alt-sub-nav-links">
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">Aluminum Letter Bending</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">SS Letter + Aluminum</a></li>
-                <li class="alt-sub-items"><a href="#" class="alt-mobile-sub-link">SS + Aluminum + Profile</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/aluminum-letter-bending')); ?>" class="alt-mobile-sub-link">Aluminum Letter Bending</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/ss-letter-aluminum')); ?>" class="alt-mobile-sub-link">SS Letter + Aluminum</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/ss-aluminium-profile')); ?>" class="alt-mobile-sub-link">SS + Aluminum + Profile</a></li>
               </ul>
             </div>
           </div>
@@ -201,7 +209,7 @@
     <!-- PRODUCTS MEGA MENU -->
     <div class="dropdown mega-menu">
         <div class="mega-col">
-            <h4>Router</h4>
+            <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'routers', home_url('/products'))); ?>">Routers</a></h4>
               <ul class="submenu accordion">
 
                   <!-- Item 1 -->
@@ -213,9 +221,9 @@
                       </span>
                     </button>
                     <ul class="accordion-panel">
-                      <li><a href="#">1325</a></li>
-                      <li><a href="#">1530</a></li>
-                      <li><a href="#">1560</a></li>
+                      <li><a href="<?php echo esc_url(home_url('/product/wood-working-1325')); ?>">1325</a></li>
+                      <li><a href="<?php echo esc_url(home_url('/product/wood-working-1530')); ?>">1530</a></li>
+                      <li><a href="<?php echo esc_url(home_url('/product/wood-working-1560')); ?>">1560</a></li>
                     </ul>
                   </li>
 
@@ -228,9 +236,9 @@
                       </span>
                     </button>
                     <ul class="accordion-panel">
-                      <li><a href="#">1325</a></li>
-                      <li><a href="#">1530</a></li>
-                      <li><a href="#">1560</a></li>
+                      <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1325')); ?>">1325</a></li>
+                      <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1530')); ?>">1530</a></li>
+                      <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1560')); ?>">1560</a></li>
                     </ul>
                   </li>
 
@@ -243,65 +251,72 @@
                       </span>
                     </button>
                     <ul class="accordion-panel">
-                      <li><a href="#">1530</a></li>
-                      <li><a href="#">1550</a></li>
+                      <li><a href="<?php echo esc_url(home_url('/product/4-axis-router-1530')); ?>">1530</a></li>
+                      <li><a href="<?php echo esc_url(home_url('/product/4-axis-1550')); ?>">1550</a></li>
                     </ul>
                   </li>
 
-                  <li><a href="#">5-Axis</a></li>
+                  <li><a href="<?php echo esc_url(home_url('/product/5-axis-router')); ?>">5-Axis Router</a></li>
 
             </ul>
 
-            <h4>Stone Working</h4>
+            <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'stone-working', home_url('/products'))); ?>">Stone Working</a></h4>
             <ul>
-              <li><a href="#">1325</a></li>
-              <li><a href="#">1530</a></li>
-              <li><a href="#">1560</a></li>
+              <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1325')); ?>">1325</a></li>
+              <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1530')); ?>">1530</a></li>
+              <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1560')); ?>">1560</a></li>
             </ul>
         </div>
 
         <div class="mega-col">
-          <h4>CO2 Laser</h4>
+          <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'co2-laser', home_url('/products'))); ?>">CO2 Laser</a></h4>
           <ul>
-            <li><a href="#">1410</a></li>
-            <li><a href="#">1325</a></li>
-            <li><a href="#">1530</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/co2-laser-1410')); ?>">1410</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/co2-laser-26')); ?>">1325</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/co2-laser-1530')); ?>">1530</a></li>
           </ul>
 
-          <h4>Spot Welding</h4>
+          <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'co2-marker', home_url('/products'))); ?>">CO2 Marker</a></h4>
           <ul>
-            <li><a href="#">300W</a></li>
-            <li><a href="#">500W</a></li>
-          </ul>
-        </div>
-
-        <div class="mega-col">
-          <h4>Fiber Metal Laser</h4>
-          <ul>
-            <li><a href="#">1530</a></li>
-            <li><a href="#">2040</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/co2-marker-150-x-150')); ?>">150 × 150</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/co2-marker-200-x-200')); ?>">200 × 200</a></li>
           </ul>
 
-          <h4>Fiber Laser Welding</h4>
+          <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'spot-welding', home_url('/products'))); ?>">Spot Welding</a></h4>
           <ul>
-            <li><a href="#">1500W</a></li>
-            <li><a href="#">2000W</a></li>
-            <li><a href="#">3000W</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/spot-welding-300w')); ?>">300W</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/spot-welding-500w')); ?>">500W</a></li>
           </ul>
         </div>
 
         <div class="mega-col">
-          <h4>Channel Letter Bending</h4>
+          <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'fiber-metal-laser', home_url('/products'))); ?>">Fiber Metal Laser</a></h4>
           <ul>
-            <li><a href="#">Aluminum</a></li>
-            <li><a href="#">SS + Aluminum</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/fiber-metal-laser-1530')); ?>">1530</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/fiber-metal-laser-2040')); ?>">2040</a></li>
           </ul>
 
-          <h4>Sheet Bending Machine</h4>
+          <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'fiber-laser-welding', home_url('/products'))); ?>">Fiber Laser Welding</a></h4>
           <ul>
-            <li><a href="#">100 Tons</a></li>
-            <li><a href="#">160 Tons</a></li>
-            <li><a href="#">200 Tons</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/fiber-laser-welding-1500w')); ?>">1500W</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/fiber-laser-welding-2000w')); ?>">2000W</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/fiber-laser-welding-3000w')); ?>">3000W</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-col">
+          <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'channel-letter-bending', home_url('/products'))); ?>">Channel Letter Bending</a></h4>
+          <ul>
+            <li><a href="<?php echo esc_url(home_url('/product/aluminum-letter-bending')); ?>">Aluminum</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/ss-letter-aluminum')); ?>">SS + Aluminum</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/ss-aluminium-profile')); ?>">SS + Aluminum + Profile</a></li>
+          </ul>
+
+          <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'sheet-bending-machine', home_url('/products'))); ?>">Sheet Bending Machine</a></h4>
+          <ul>
+            <li><a href="<?php echo esc_url(home_url('/product/sheet-bending-machine-100-tons')); ?>">100 Tons</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/sheet-bending-machine-160-tons')); ?>">160 Tons</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/sheet-bending-machine-200-tons')); ?>">200 Tons</a></li>
           </ul>
         </div>
     </div>
