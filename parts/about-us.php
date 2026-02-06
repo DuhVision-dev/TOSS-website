@@ -8,7 +8,7 @@
         <div class="about-us-content ">
             <span class="sub-head">About Us</span>
             <h2>Our Way of Working</h2>
-            <p>Lorem ipsum dolor sit amet consectetur. Nullam integer lobortis convallis feugiat in risus eu purus malesuada. Pretium elementum ut consequat et id. Id dolor purus sit commodo sapien ligula. Non quis pellentesque ipsum morbi. Eget enim iaculis vitae ultrices et ornare eu. Convallis in ipsum nulla tempus quis accumsan eros rutrum. Cursus dictumst diam scelerisque placerat. Eget aenean semper sit ultricies non proin ultrices.</p>
+            <p>At TOSS, we design and manufacture CNC machines built for reliable daily production. Our working process focuses on precision engineering, quality manufacturing, and consistent performance across industries such as automotive, woodworking, electronics, and tooling. From machine design and assembly to testing and installation, every step is handled with attention to accuracy, durability, and long-term use. We work closely with manufacturers to deliver CNC solutions that support productivity, reduce downtime, and perform reliably in real factory environments.</p>
 
             <div class="stats">
 

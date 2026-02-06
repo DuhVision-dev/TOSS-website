@@ -264,6 +264,33 @@
 
 
 
+/* Featured Products section */
+
+
+.featured-products p{
+    text-align: center;
+    max-width: 110ch;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.featured-products h2{
+  text-align: center;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -4,6 +4,7 @@
 <section id="products" class="products-preview section">
   <div class="featured-products container">
     <h2>Featured Products</h2>
+    <p>At TOSS, we design and manufacture CNC machines built for reliable daily production. Our working process focuses on precision engineering, quality manufacturing, and consistent performance across industries such as automotive, woodworking, electronics, and tooling. From machine design and assembly to testing and installation, every step is handled with attention to accuracy, durability, and long-term use. We work closely with manufacturers to deliver CNC solutions that support productivity, reduce downtime, and perform reliably in real factory environments.</p>
     
     <div class="carousel-wrapper">
       <div class="carousel-track-container">
