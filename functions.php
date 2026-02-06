@@ -99,9 +99,10 @@ function toss_enqueue_assets() {
     wp_enqueue_script('toss-single-product', get_template_directory_uri() . '/assets/js/single-product.js', array('gsap'), '1.0', true);
   }
   
-  // Products Page Template Assets
-  if (is_page_template('pages/page-products.php')) {
+  // Products Archive Page Assets (Shop page)
+  if (is_post_type_archive('product') || (is_page_template('pages/page-products.php'))) {
     wp_enqueue_style('toss-products-page', get_template_directory_uri() . '/assets/css/sections.css', array(), '1.0');
+    wp_enqueue_style('toss-products-page-layout', get_template_directory_uri() . '/assets/css/layout.css', array(), '1.0');
   }
   
   // Industry Pages Assets

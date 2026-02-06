@@ -2,6 +2,13 @@
    SINGLE PRODUCT PAGE STYLES
    ============================================ */
 
+/* ============================================
+   WOOCOMMERCE NATIVE OVERRIDES - IMPORTANT
+   ============================================ */
+.woocommerce-breadcrumb {
+  margin-top: 24px !important;
+}
+
 .single-product-page {
   padding: 0;
 }
@@ -10,7 +17,7 @@
    PRODUCT HERO SECTION
    ============================================ */
 .product-hero {
-  padding: 60px 0;
+  padding: 36px 0;
   background: #fff;
 }
 
