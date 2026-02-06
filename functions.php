@@ -276,5 +276,159 @@ function get_youtube_embed_url( $url ) {
     return $video_id ? 'https://www.youtube.com/embed/' . $video_id : '';
 }
 
+/**
+ * Add Application Images meta box to product admin
+ */
+add_action( 'add_meta_boxes', 'add_application_images_meta_box' );
+function add_application_images_meta_box() {
+    add_meta_box(
+        'product_application_images',
+        __( 'Application Images', 'woocommerce' ),
+        'render_application_images_meta_box',
+        'product',
+        'side',
+        'default'
+    );
+}
+
+/**
+ * Render Application Images meta box
+ */
+function render_application_images_meta_box( $post ) {
+    wp_nonce_field( 'save_application_images', 'application_images_nonce' );
+    
+    $application_images = get_post_meta( $post->ID, '_application_images', true );
+    $application_images = $application_images ? $application_images : array();
+    
+    ?>
+    <div id="application_images_container">
+        <div id="application_images_list">
+            <?php
+            for ( $i = 0; $i < 4; $i++ ) {
+                $image_id = isset( $application_images[$i] ) ? $application_images[$i] : '';
+                $image_url = $image_id ? wp_get_attachment_image_url( $image_id, 'thumbnail' ) : '';
+                ?>
+                <div class="application-image-item" style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">
+                        <?php echo sprintf( __( 'Image %d', 'woocommerce' ), $i + 1 ); ?>
+                    </label>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <input type="hidden" name="application_images[<?php echo $i; ?>]" class="application-image-id" value="<?php echo esc_attr( $image_id ); ?>" />
+                        <div class="application-image-preview" style="width: 80px; height: 80px; border: 1px solid #ddd; background: #f5f5f5; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <?php if ( $image_url ) : ?>
+                                <img src="<?php echo esc_url( $image_url ); ?>" style="max-width: 100%; max-height: 100%; object-fit: cover;" />
+                            <?php else : ?>
+                                <span style="color: #999; font-size: 12px;">No image</span>
+                            <?php endif; ?>
+                        </div>
+                        <button type="button" class="button application-image-upload" data-index="<?php echo $i; ?>">
+                            <?php echo $image_id ? __( 'Change', 'woocommerce' ) : __( 'Upload', 'woocommerce' ); ?>
+                        </button>
+                        <?php if ( $image_id ) : ?>
+                            <button type="button" class="button application-image-remove" data-index="<?php echo $i; ?>">
+                                <?php _e( 'Remove', 'woocommerce' ); ?>
+                            </button>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+        </div>
+    </div>
+    
+    <script>
+    jQuery(document).ready(function($) {
+        // Upload image
+        $(document).on('click', '.application-image-upload', function(e) {
+            e.preventDefault();
+            
+            var button = $(this);
+            var index = button.data('index');
+            var container = button.closest('.application-image-item');
+            
+            var frame = wp.media({
+                title: '<?php _e( 'Select Application Image', 'woocommerce' ); ?>',
+                button: {
+                    text: '<?php _e( 'Use this image', 'woocommerce' ); ?>'
+                },
+                multiple: false
+            });
+            
+            frame.on('select', function() {
+                var attachment = frame.state().get('selection').first().toJSON();
+                
+                container.find('.application-image-id').val(attachment.id);
+                container.find('.application-image-preview').html('<img src="' + attachment.url + '" style="max-width: 100%; max-height: 100%; object-fit: cover;" />');
+                
+                button.text('<?php _e( 'Change', 'woocommerce' ); ?>');
+                
+                if (!container.find('.application-image-remove').length) {
+                    button.after('<button type="button" class="button application-image-remove" data-index="' + index + '"><?php _e( 'Remove', 'woocommerce' ); ?></button>');
+                }
+            });
+            
+            frame.open();
+        });
+        
+        // Remove image
+        $(document).on('click', '.application-image-remove', function(e) {
+            e.preventDefault();
+            
+            var button = $(this);
+            var container = button.closest('.application-image-item');
+            
+            container.find('.application-image-id').val('');
+            container.find('.application-image-preview').html('<span style="color: #999; font-size: 12px;">No image</span>');
+            container.find('.application-image-upload').text('<?php _e( 'Upload', 'woocommerce' ); ?>');
+            
+            button.remove();
+        });
+    });
+    </script>
+    <?php
+}
+
+/**
+ * Save Application Images
+ */
+add_action( 'save_post_product', 'save_application_images_meta_box' );
+function save_application_images_meta_box( $post_id ) {
+    // Check nonce
+    if ( !isset( $_POST['application_images_nonce'] ) || !wp_verify_nonce( $_POST['application_images_nonce'], 'save_application_images' ) ) {
+        return;
+    }
+    
+    // Check autosave
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+    
+    // Check permissions
+    if ( !current_user_can( 'edit_post', $post_id ) ) {
+        return;
+    }
+    
+    // Save application images
+    if ( isset( $_POST['application_images'] ) ) {
+        $images = array_filter( array_map( 'absint', $_POST['application_images'] ) );
+        update_post_meta( $post_id, '_application_images', $images );
+    } else {
+        delete_post_meta( $post_id, '_application_images' );
+    }
+}
+
+/**
+ * Enqueue media uploader in product admin
+ */
+add_action( 'admin_enqueue_scripts', 'enqueue_application_images_admin_scripts' );
+function enqueue_application_images_admin_scripts( $hook ) {
+    global $post_type;
+    
+    if ( ( 'post.php' === $hook || 'post-new.php' === $hook ) && 'product' === $post_type ) {
+        wp_enqueue_media();
+    }
+}
+
 
 

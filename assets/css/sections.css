@@ -1,6 +1,6 @@
 /* sections.css — hero, why-us, etc */
 
-.section { padding: 4rem 0; }
+.section { padding: 2rem 0; }
 .hero { display: grid; align-items: center; gap: 2rem; }
 
 .cta { text-align: center; }
@@ -812,7 +812,7 @@
 
 .contact-inquiry {
   /* background-color: #f5f5f5; */
-  padding: 160px 0;
+  padding: 0;
 }
 
 .inquiry-title {

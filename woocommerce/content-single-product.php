@@ -169,34 +169,32 @@ if ( ! $product ) {
 			
 			<div class="applications-grid">
 				<?php
-				// Use product gallery images for applications
-				$gallery_image_ids = $product->get_gallery_image_ids();
+				// Get application images from custom meta box
+				$application_images = get_post_meta( get_the_ID(), '_application_images', true );
 				
-				if (!empty($gallery_image_ids)) :
-					// Display up to 6 gallery images
-					$count = 0;
-					foreach ($gallery_image_ids as $gallery_image_id) :
-						if ($count >= 6) break;
+				if (!empty($application_images) && is_array($application_images)) :
+					// Display uploaded application images
+					foreach ($application_images as $image_id) :
+						if (empty($image_id)) continue;
 						
-						$image_alt = get_post_meta($gallery_image_id, '_wp_attachment_image_alt', true);
-						$image_caption = wp_get_attachment_caption($gallery_image_id);
+						$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+						$image_caption = wp_get_attachment_caption($image_id);
 						?>
 						<div class="application-item">
-							<?php echo wp_get_attachment_image($gallery_image_id, 'medium', false, array('class' => 'application-image')); ?>
+							<?php echo wp_get_attachment_image($image_id, 'large', false, array('class' => 'application-image')); ?>
 							<?php if ($image_caption) : ?>
 								<p class="application-caption"><?php echo esc_html($image_caption); ?></p>
 							<?php endif; ?>
 						</div>
 						<?php
-						$count++;
 					endforeach;
 				else :
-					// Fallback: show featured image if no gallery exists
+					// Fallback: show featured image if no application images uploaded
 					if (has_post_thumbnail()) :
 						for ($i = 0; $i < 3; $i++) :
 						?>
 							<div class="application-item">
-								<?php the_post_thumbnail('medium', array('class' => 'application-image')); ?>
+								<?php the_post_thumbnail('large', array('class' => 'application-image')); ?>
 							</div>
 						<?php
 						endfor;
