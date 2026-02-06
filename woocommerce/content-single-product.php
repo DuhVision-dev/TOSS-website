@@ -209,7 +209,36 @@ if ( ! $product ) {
 	</section>
 	
 	<!-- ============================================
-		 SECTION 4: INQUIRY FORM
+		 SECTION 4: YOUTUBE VIDEO
+		 ============================================ -->
+	<?php
+	// Get YouTube URL from product meta, use default if not set
+	$youtube_url = get_post_meta( get_the_ID(), '_youtube_url', true );
+	if ( empty( $youtube_url ) ) {
+		$youtube_url = 'https://youtu.be/W2asSTOox_k'; // Default video
+	}
+	$embed_url = get_youtube_embed_url( $youtube_url );
+	
+	if ( $embed_url ) : ?>
+		<section class="product-youtube-section section-padding">
+			<div class="container">
+				<h2 class="section-title">Product Video</h2>
+				<div class="youtube-wrapper">
+					<iframe 
+						width="560" 
+						height="315" 
+						src="<?php echo esc_url( $embed_url ); ?>" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</div>
+		</section>
+	<?php endif; ?>
+	
+	<!-- ============================================
+		 SECTION 5: INQUIRY FORM
 		 ============================================ -->
 	<?php get_template_part('parts/cta'); ?>
 

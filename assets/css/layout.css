@@ -316,10 +316,17 @@
     background: #fff;
     border-bottom: 1px solid #e0e0e0;
     padding: 12px 16px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    margin: 0 -16px 24px -16px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    margin: 0;
+  }
+  
+  /* Add spacing to products page content to account for fixed navbar */
+  .products-page .products-container {
+    margin-top: 60px;
   }
   
   .mobile-category-scroll {

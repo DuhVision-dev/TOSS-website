@@ -18,6 +18,11 @@ function toss_theme_setup() {
 add_action( 'after_setup_theme', 'toss_theme_setup' );
 
 /**
+ * Remove WordPress Admin Bar
+ */
+add_filter('show_admin_bar', '__return_false');
+
+/**
  * Enqueue styles and scripts
  */
 function toss_enqueue_assets() {
@@ -226,8 +231,50 @@ function toss_load_custom_page_templates($template) {
 }
 add_filter('template_include', 'toss_load_custom_page_templates', 99);
 
+/**
+ * Add YouTube URL field to product admin
+ */
+add_action( 'woocommerce_product_options_general_product_data', 'add_youtube_url_field' );
+function add_youtube_url_field() {
+    woocommerce_wp_text_input( array(
+        'id'          => '_youtube_url',
+        'label'       => __( 'YouTube URL', 'woocommerce' ),
+        'placeholder' => 'https://www.youtube.com/watch?v=...',
+        'desc_tip'    => true,
+        'description' => __( 'Enter the YouTube video URL for this product', 'woocommerce' )
+    ) );
+}
 
+/**
+ * Save the YouTube URL field
+ */
+add_action( 'woocommerce_process_product_meta', 'save_youtube_url_field' );
+function save_youtube_url_field( $post_id ) {
+    $youtube_url = isset( $_POST['_youtube_url'] ) ? sanitize_text_field( $_POST['_youtube_url'] ) : '';
+    update_post_meta( $post_id, '_youtube_url', $youtube_url );
+}
 
+/**
+ * Convert YouTube URL to embed URL
+ */
+function get_youtube_embed_url( $url ) {
+    if ( empty( $url ) ) {
+        return '';
+    }
+    
+    $video_id = '';
+    
+    // Handle different YouTube URL formats
+    if ( preg_match( '/youtube\\.com\\/watch\\?v=([^\\&\\?\\/]+)/', $url, $id ) ) {
+        $video_id = $id[1];
+    } elseif ( preg_match( '/youtube\\.com\\/embed\\/([^\\&\\?\\/]+)/', $url, $id ) ) {
+        $video_id = $id[1];
+    } elseif ( preg_match( '/youtu\\.be\\/([^\\&\\?\\/]+)/', $url, $id ) ) {
+        $video_id = $id[1];
+    }
+    
+    return $video_id ? 'https://www.youtube.com/embed/' . $video_id : '';
+}
 
 
 

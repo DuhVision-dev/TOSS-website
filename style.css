@@ -3,3 +3,40 @@ Theme Name: TOSS
 Author: TOSS
 Version: 1.0
 */
+
+/* YouTube Video Section */
+.product-youtube-section {
+    background-color: #f8f9fa;
+}
+
+.product-youtube-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-youtube-section .section-title {
+    text-align: center;
+    width: 100%;
+}
+
+.youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+.youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
