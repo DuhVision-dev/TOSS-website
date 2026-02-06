@@ -99,6 +99,11 @@ function toss_enqueue_assets() {
     wp_enqueue_script('toss-single-product', get_template_directory_uri() . '/assets/js/single-product.js', array('gsap'), '1.0', true);
   }
   
+  // Products Page Template Assets
+  if (is_page_template('pages/page-products.php')) {
+    wp_enqueue_style('toss-products-page', get_template_directory_uri() . '/assets/css/sections.css', array(), '1.0');
+  }
+  
   // Industry Pages Assets
   if (is_page_template('pages/industries/page-automobile.php') || 
       is_page_template('pages/industries/page-interior.php') || 
