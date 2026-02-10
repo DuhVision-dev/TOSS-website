@@ -118,6 +118,29 @@ function toss_enqueue_assets() {
 
 add_action('wp_enqueue_scripts', 'toss_enqueue_assets');
 
+/**
+ * Get the products page URL
+ */
+function toss_get_products_page_url() {
+  // Find the page with "Products Page" template
+  $products_page = get_pages(array(
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'pages/page-products.php'
+  ));
+  
+  if (!empty($products_page)) {
+    return get_permalink($products_page[0]->ID);
+  }
+  
+  // Fallback to shop page if Products Page template not found
+  $shop_page_id = wc_get_page_id('shop');
+  if ($shop_page_id) {
+    return get_permalink($shop_page_id);
+  }
+  
+  // Final fallback
+  return home_url('/products/');
+}
 
 /**
  * Handle inquiry form submission

@@ -369,10 +369,32 @@ if (certificatesCarouselTrack && certificatesCarouselCards.length > 0 && certifi
 // Mobile Category Dropdown Toggle (Products Page) with GSAP
 const mobileCategoryToggle = document.querySelector('.mobile-category-toggle');
 const mobileCategoryDropdown = document.querySelector('.mobile-category-dropdown');
+const mobileCategoryNavbar = document.querySelector('.mobile-category-navbar');
 const mobileCategoryScroll = document.querySelector('.mobile-category-scroll');
 
 if (mobileCategoryToggle && mobileCategoryDropdown) {
   let isDropdownOpen = false;
+  
+  // Function to position navbar right after header
+  function positionNavbarAfterHeader() {
+    const siteHeader = document.querySelector('.site-header');
+    if (siteHeader && mobileCategoryNavbar) {
+      const headerHeight = siteHeader.offsetHeight;
+      mobileCategoryNavbar.style.top = headerHeight + 'px';
+      
+      // Position dropdown below navbar
+      if (mobileCategoryDropdown) {
+        const navbarHeight = mobileCategoryNavbar.offsetHeight;
+        mobileCategoryDropdown.style.top = (headerHeight + navbarHeight) + 'px';
+      }
+    }
+  }
+  
+  // Position on load
+  positionNavbarAfterHeader();
+  
+  // Reposition on window resize
+  window.addEventListener('resize', positionNavbarAfterHeader);
   
   // Set initial state
   gsap.set(mobileCategoryDropdown, { height: 0, overflow: 'hidden' });

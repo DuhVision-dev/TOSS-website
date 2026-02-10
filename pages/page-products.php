@@ -62,7 +62,7 @@ $products_query = new WP_Query($args);
           foreach ($mobile_parent_cats as $mobile_cat) :
               if ($mobile_cat->slug === 'uncategorized') continue;
               
-              $mobile_cat_url = add_query_arg('product_cat', $mobile_cat->slug, get_permalink());
+              $mobile_cat_url = add_query_arg('product_cat', $mobile_cat->slug, toss_get_products_page_url());
               $mobile_active = ($current_category === $mobile_cat->slug) ? 'active' : '';
               ?>
               <a href="<?php echo esc_url($mobile_cat_url); ?>" class="mobile-category-item <?php echo esc_attr($mobile_active); ?>">
@@ -95,7 +95,7 @@ $products_query = new WP_Query($args);
           foreach ($dropdown_parent_cats as $dropdown_parent) :
               if ($dropdown_parent->slug === 'uncategorized') continue;
               
-              $dropdown_parent_url = add_query_arg('product_cat', $dropdown_parent->slug, get_permalink());
+              $dropdown_parent_url = add_query_arg('product_cat', $dropdown_parent->slug, toss_get_products_page_url());
               $dropdown_parent_active = ($current_category === $dropdown_parent->slug) ? 'active' : '';
               
               // Get children
@@ -115,7 +115,7 @@ $products_query = new WP_Query($args);
                   <?php if (!empty($dropdown_children) && !is_wp_error($dropdown_children)) : ?>
                       <div class="mobile-dropdown-children">
                           <?php foreach ($dropdown_children as $dropdown_child) :
-                              $dropdown_child_url = add_query_arg('product_cat', $dropdown_child->slug, get_permalink());
+                              $dropdown_child_url = add_query_arg('product_cat', $dropdown_child->slug, toss_get_products_page_url());
                               $dropdown_child_active = ($current_category === $dropdown_child->slug) ? 'active' : '';
                           ?>
                               <a href="<?php echo esc_url($dropdown_child_url); ?>" class="mobile-dropdown-child <?php echo esc_attr($dropdown_child_active); ?>">
@@ -159,7 +159,7 @@ $products_query = new WP_Query($args);
                   if ($parent_cat->slug === 'uncategorized') continue;
                   
                   // Build parent category URL
-                  $parent_url = add_query_arg('product_cat', $parent_cat->slug, get_permalink());
+                  $parent_url = add_query_arg('product_cat', $parent_cat->slug, toss_get_products_page_url());
                   
                   // Check if this parent is active
                   $parent_active = ($current_category === $parent_cat->slug) ? 'active' : '';
@@ -206,7 +206,7 @@ $products_query = new WP_Query($args);
                           <!-- Sub-categories -->
                           <ul class="product-subcategories-list">
                               <?php foreach ($child_categories as $child_cat) : 
-                                  $child_url = add_query_arg('product_cat', $child_cat->slug, get_permalink());
+                              $child_url = add_query_arg('product_cat', $child_cat->slug, toss_get_products_page_url());
                                   $child_active = ($current_category === $child_cat->slug) ? 'active' : '';
                               ?>
                                   <li class="category-item subcategory-item <?php echo esc_attr($child_active); ?>">
