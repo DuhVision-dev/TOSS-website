@@ -18,28 +18,41 @@ get_header();
 
           <div class="hero-btns">
           <?php 
-          $text = 'Call Us Now';
-          $url = home_url('/contact');
-          $type = 'primary';
-          include get_template_directory() . '/components/button.php';
+          // $text = 'Call Us Now';
+          // $url = home_url('/contact');
+          // $type = 'primary';
+          // include get_template_directory() . '/components/button.php';
           ?>
 
-          <?php $text = 'View Our Products';
-          $text = 'View Our Products';
-          $url = home_url('/products');
-          $type = 'secondary';
-          include get_template_directory() . '/components/button.php';
+          <?php 
+          // $text = 'View Our Products';
+          // $text = 'View Our Products';
+          // $url = home_url('/products');
+          // $type = 'secondary';
+          // include get_template_directory() . '/components/button.php';
           ?>
         </div>
         </div>
         
         <div class="hero-image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industries/engineering.png" alt="Engineering Industry Hero Image">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industries/webp/engineering.webp" alt="Engineering Industry Hero Image">
         </div>
         
       </div>
     </div>
   </section>
+
+  <section class="ind-info section">
+    <div class="ind-info-container container">
+      <div class="ind-info-content">
+        <span class="ind-info-head">Applications in Engineering Manufacturing</span>
+        <p class="ind-info-text">
+         Our CNC machines are widely used in general engineering for precision machining of metal components, machine parts, brackets, housings, and custom fabricated parts. With advanced 4-axis and 5-axis CNC machining capabilities, they support complex part manufacturing, multi-side machining, industrial production, and batch processing with high accuracy and consistent performance.
+        </p>
+      </div>
+    </div>
+  </section>
+
  </main>
 <?php
 get_footer();

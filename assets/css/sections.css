@@ -1,6 +1,9 @@
 /* sections.css — hero, why-us, etc */
 
-.section { padding: 2rem 0; }
+.section { 
+  padding:  0;
+  margin-bottom: 32px!important;
+}
 .hero { display: grid; align-items: center; gap: 2rem; }
 
 .cta { text-align: center; }
@@ -49,6 +52,7 @@
 
 .hero-text{
     margin-top: 32px;
+    max-width: 60ch;
     
 }
 
@@ -115,7 +119,11 @@
 
 
 
-
+.about-us-section{
+  background-color: var(--color-stroke);
+  margin: 0 -64px ;
+  padding: 16px 64px;
+}
 
 .about-us-content{
     /* max-width: 100%; */
@@ -467,7 +475,7 @@
 
 
 .industries-section h2{
-    margin-bottom: 114px;
+    margin-bottom: 40px;
 }
 
 
@@ -508,9 +516,14 @@
     background: none;
     border: none;
     font-weight: 600;
-    color: var(--color-primary);
+    color: #3647FF;
     cursor: pointer;
     margin-top: 8px;
+    transition: all 0.3s ease;
+}
+
+.ind-btn:hover{
+    color: var(--color-black);
 }
 
 .ind-btn img{
@@ -1311,7 +1324,9 @@
 /* contact cards */
 
 .contact-cards-wrapper{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(2, auto);   /* 2 rows */
   gap: 26px;
   justify-content: center;
   margin: 108px 0 ;
@@ -1328,12 +1343,21 @@
   justify-content: center;
 }
 
+
+
 .cards-sml:hover{
   border: 2px solid var(--color-primary);
 }
 
+.card-hover{
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-stroke);
+}
+
+
+
 .card-sml-conent{
-  width:175px;
+  /* width:175px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1427,5 +1451,53 @@
   
   .card-sml-content {
     font-size: 14px;
+  }
+}
+
+
+
+
+
+
+/* industries pages */
+
+
+
+
+/* interior page */
+
+
+.ind-imgs{
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  width: 100%;
+}
+
+.ind-imgs img{
+  flex: 1;
+  min-width: 0;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+
+.ind-info-content span{
+  font-size: 36px;
+  font-family: var(--font-heading);
+  margin: 28px 0 8px 0;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .ind-imgs {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .ind-imgs img {
+    aspect-ratio: auto;
   }
 }

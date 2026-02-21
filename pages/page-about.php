@@ -6,7 +6,7 @@ get_header();
 ?>
 <main class="about-main">
 
-<!-- about hero -->
+  <!-- about hero -->
 
       <section class="about-hero section">
         <div class="about-hero container">
@@ -23,21 +23,22 @@ get_header();
             <p class="hero-text">Focused on precision, reliability, and long-<br>term performance.</p>
 
 
-            <div class="hero-btns">
+            <!-- <div class="hero-btns">
                 <?php 
-                $text = 'Call Us Now';
-                $url = home_url('/contact');
-                $type = 'primary';
-                include get_template_directory() . '/components/button.php';
+                // $text = 'Call Us Now';
+                // $url = home_url('/contact');
+                // $type = 'primary';
+                // include get_template_directory() . '/components/button.php';
                 ?>
 
-                <?php $text = 'View Our Products';
-                $text = 'View Our Products';
-                $url = home_url('/products');
-                $type = 'secondary';
-                include get_template_directory() . '/components/button.php';
+                <?php 
+                // $text = 'View Our Products';
+                // $text = 'View Our Products';
+                // $url = home_url('/products');
+                // $type = 'secondary';
+                // include get_template_directory() . '/components/button.php';
                 ?>
-            </div>
+            </div> -->
 
           </div>
 
@@ -52,7 +53,7 @@ get_header();
 
 
 
-      <section class="stats-sections section">
+      <!-- <section class="stats-sections section">
         <div class="about-stats">
 
                 <div class="stat stat-1">
@@ -71,12 +72,13 @@ get_header();
                 </div>
                 
             </div>
-      </section>
+      </section> -->
 
       <section class="why-us-section section">
         <div class="why-us-container container">
+          <h2>Why Choose Us</h2>
            <div class="whyus-cards">
-
+            
             <div class="main-card">
               <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/why-us/production-ready.svg'; ?>" alt="" class="ind-icon">
               <h4>Production Ready</h4>
@@ -144,7 +146,7 @@ get_header();
       </section>
 
 
-      <section class="certificates section">
+      <!-- <section class="certificates section">
         <div class="certificates-container container">
           <span class="sub-head">Our Certificates</span>
           <h2>Standards We Are Certified For</h2>
@@ -195,9 +197,9 @@ get_header();
           </div>
           
         </div>
-      </section>
+      </section> -->
 
-      <?php include get_template_directory() . '/parts/cta.php'; ?>
+      <?php //include get_template_directory() . '/parts/cta.php'; ?>
 
 
 

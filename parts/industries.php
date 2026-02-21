@@ -14,7 +14,7 @@
         <h4>Automobile</h4>
         <p>CNC solutions for machining automotive parts with high accuracy and repeatability.Built to support volume production and tight tolerance requirements.</p>
         <button class="ind-btn">
-          Learn More
+         <a href="<?php echo esc_url(home_url('/industries/automobile')); ?>">Learn More</a> 
           <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow.svg'; ?>" alt="">
         </button>
       </div>
@@ -25,7 +25,7 @@
         <h4>Interior</h4>
         <p>Precision CNC machines for panels, furniture, and interior components. Designed to deliver clean finishes and consistent results.</p>
         <button class="ind-btn">
-          Learn More
+         <a href="<?php echo esc_url(home_url('/industries/interior')); ?>">Learn More</a> 
           <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow.svg'; ?>" alt="">
         </button>
       </div>
@@ -35,7 +35,7 @@
         <h4>Engineering</h4>
         <p>Reliable CNC machines for general engineering and custom applications. Supports accurate machining across varied materials and designs.</p>
         <button class="ind-btn">
-          Learn More
+         <a href="<?php echo esc_url(home_url('/industries/engineering')); ?>">Learn More</a> 
           <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow.svg'; ?>" alt="">
         </button>
       </div>
@@ -45,7 +45,7 @@
         <h4>Manufacturing</h4>
         <p>CNC solutions built for stable and repeatable manufacturing operations. Focused on productivity, consistency, and daily production needs.</p>
         <button class="ind-btn">
-          Learn More
+         <a href="<?php echo esc_url(home_url('/industries/manufacturing')); ?>">Learn More</a> 
           <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow.svg'; ?>" alt="">
         </button>
       </div>
@@ -55,7 +55,7 @@
         <h4>Electronics</h4>
         <p>Accurate machining for enclosures, panels, and electronic components. Designed for fine detail and dependable performance.</p>
         <button class="ind-btn">
-          Learn More
+         <a href="<?php echo esc_url(home_url('/industries/electronics')); ?>">Learn More</a> 
           <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow.svg'; ?>" alt="">
         </button>
       </div>
@@ -65,7 +65,7 @@
         <h4>Tooling</h4>
         <p>Precision machining for tools, dies, and tooling components. Built to maintain accuracy and consistency over long use.</p>
         <button class="ind-btn">
-          Learn More
+          <a href="<?php echo esc_url(home_url('/industries/tooling')); ?>  ">Learn More</a>
           <img src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow.svg'; ?>" alt="">
         </button>
       </div>

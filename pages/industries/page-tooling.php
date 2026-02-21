@@ -16,31 +16,29 @@ get_header();
             Built to maintain consistency, accuracy, and reliability in tooling production.
           </p>
 
-          <div class="hero-btns">
-          <?php 
-          $text = 'Call Us Now';
-          $url = home_url('/contact');
-          $type = 'primary';
-          include get_template_directory() . '/components/button.php';
-          ?>
-
-          <?php $text = 'View Our Products';
-          $text = 'View Our Products';
-          $url = home_url('/products');
-          $type = 'secondary';
-          include get_template_directory() . '/components/button.php';
-          ?>
-        </div>
+      
         </div>
         
         <div class="hero-image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industries/tooling.png" alt="Tooling Industry Hero Image">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industries/webp/tooling.webp" alt="Tooling Industry Hero Image">
         </div>
         
       </div>
     </div>
 
   </section>
+
+  <section class="ind-info section">
+    <div class="ind-info-container container">
+      <div class="ind-info-content">
+        <span class="ind-info-head">Applications in Tooling Manufacturing</span>
+        <p class="ind-info-text">
+         Our CNC machines are widely used in tooling manufacturing for precision machining of molds, dies, fixtures, jigs, and cutting tools. Designed for high-accuracy CNC milling and drilling, they support tool and die making, mold manufacturing, and custom tooling production with consistent quality and repeatable precision.
+        </p>
+      </div>
+    </div>
+  </section>
+
  </main>
 <?php
 get_footer();

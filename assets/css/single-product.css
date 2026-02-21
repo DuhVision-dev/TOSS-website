@@ -130,6 +130,7 @@
   /* background: #f9f9f9; */
 }
 
+
 .section-padding {
   padding: 80px 0;
 }
@@ -146,18 +147,33 @@
   max-width: 900px;
   margin: 0 auto;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); */
 }
 
 .parameters-table {
   width: 100%;
+  border-radius:0 ;
   border-collapse: collapse;
+  border: 1px solid var(--color-stroke);
 }
 
+
+.parameter-header {
+  background-color: var(--color-stroke);
+  color: var(--color-black);
+  font-family: var(--font-heading);
+  font-size: 32px;
+}
+
+.parameter-header td {
+  font-size: 20px !important;
+}
+
+
 .parameters-table tr {
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--color-stroke);
 }
 
 .parameters-table tr:last-child {
@@ -165,20 +181,25 @@
 }
 
 .parameters-table td {
-  padding: 20px 24px;
-  font-size: 16px;
+  padding: 12px 24px;
+  font-size: 14px;
 }
 
 .parameter-name {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-black);
   width: 40%;
-  background: #f5f5f5;
+  /* background: var(--color-primary); */
 }
 
 .parameter-value {
-  color: #666;
+  color: var(--color-black);
   width: 60%;
+  opacity: 0.8;
+}
+
+.parameters-table tbody tr:nth-child(odd):not(.parameter-header) {
+  background-color: #fffcf6;
 }
 
 .no-parameters {

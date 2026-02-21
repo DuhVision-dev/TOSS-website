@@ -34,7 +34,7 @@ Designed for reliability, accuracy, and consistent output in daily factory use.
         </div>
         
         <div class="hero-image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industries/manufacturing.png" alt="Manufacturing Industry Hero Image">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industries/webp/manufacturing.webp" alt="Manufacturing Industry Hero Image">
         </div>
         
       </div>

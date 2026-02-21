@@ -82,7 +82,7 @@
       
       <div class="form-actions">
         <button type="submit" class="btn btn-primary">
-          Call Us Now
+          Submit My Inquiry
         </button>
       </div>
       

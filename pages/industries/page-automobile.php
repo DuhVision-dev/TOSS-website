@@ -17,30 +17,26 @@ get_header();
             Built to meet the demands of high-volume manufacturing and tight tolerances.
           </p>
 
-          <div class="hero-btns">
-          <?php 
-          $text = 'Call Us Now';
-          $url = home_url('/contact');
-          $type = 'primary';
-          include get_template_directory() . '/components/button.php';
-          ?>
-
-          <?php $text = 'View Our Products';
-          $text = 'View Our Products';
-          $url = home_url('/products');
-          $type = 'secondary';
-          include get_template_directory() . '/components/button.php';
-          ?>
-        </div>
+          
         </div>
         
         <div class="hero-image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industries/automobile.jpg" alt="Automobile Industry Hero Image">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industries/webp/automobile.webp" alt="Automobile Industry Hero Image">
         </div>
         
       </div>
     </div>
     
+  </section>
+   <section class="ind-info section">
+    <div class="ind-info-container container">
+      <div class="ind-info-content">
+        <span class="ind-info-head">Applications in Automotive Manufacturing</span>
+        <p class="ind-info-text">
+         Our CNC machines are widely used in automotive manufacturing for precision machining of engine components, brackets, housings, transmission parts, and structural components. Designed for high-speed CNC milling and drilling, they support automotive parts production, batch manufacturing, and tight tolerance machining with consistent accuracy and reliable performance.
+        </p>
+      </div>
+    </div>
   </section>
  </main>
 <?php

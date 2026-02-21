@@ -125,6 +125,10 @@ if ( ! $product ) {
 				<div class="parameters-table-wrapper">
 					<table class="parameters-table">
 						<tbody>
+							<tr class="parameter-header">
+								<td class="parameter-tittle">Parameters</td>
+								<td class="parameter-tittle">Values</td>
+							</tr>
 							<?php
 							foreach ($attributes as $attribute) :
 								// Get attribute name and values

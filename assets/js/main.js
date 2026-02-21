@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!link || !dropdown) return;
 
+    let closeTimeout = null;
+
     function positionDropdown() {
       const linkRect = link.getBoundingClientRect();
       const dropdownRect = dropdown.getBoundingClientRect();
@@ -26,12 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     navItem.addEventListener('mouseenter', () => {
+      // Clear any pending close timeout
+      if (closeTimeout) {
+        clearTimeout(closeTimeout);
+        closeTimeout = null;
+      }
       navItem.classList.add('is-open');
       positionDropdown();
     });
 
     navItem.addEventListener('mouseleave', () => {
-      navItem.classList.remove('is-open');
+      // Add delay before closing
+      closeTimeout = setTimeout(() => {
+        navItem.classList.remove('is-open');
+      }, 300);
     });
 
     window.addEventListener('resize', () => {

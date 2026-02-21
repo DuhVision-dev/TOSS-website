@@ -13,7 +13,7 @@ $current_category = isset($_GET['product_cat']) ? sanitize_text_field($_GET['pro
 // ============================================
 // STEP 2: Get current page for pagination
 // ============================================
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$paged = isset($_GET['paged']) ? max(1, (int) sanitize_text_field($_GET['paged'])) : (get_query_var('paged') ? (int) get_query_var('paged') : 1);
 
 // ============================================
 // STEP 3: Set up WooCommerce product query
@@ -328,25 +328,80 @@ $products_query = new WP_Query($args);
              ============================================ -->
         <?php if ($products_query->max_num_pages > 1) : ?>
           <div class="products-pagination">
-            <?php
-            // Generate pagination links
-            $pagination_args = array(
-                'total'        => $products_query->max_num_pages,
-                'current'      => $paged,
-                'prev_text'    => '&laquo; Previous',
-                'next_text'    => 'Next &raquo;',
-                'type'         => 'list',
-                'end_size'     => 1,
-                'mid_size'     => 2
-            );
-            
-            // If category is selected, preserve it in pagination URLs
-            if (!empty($current_category)) {
-                $pagination_args['add_args'] = array('product_cat' => $current_category);
-            }
-            
-            echo paginate_links($pagination_args);
-            ?>
+            <ul>
+              <?php
+              // Build pagination using query parameters
+              $current_page = $paged;
+              $max_pages = $products_query->max_num_pages;
+              $base_url = toss_get_products_page_url();
+              
+              // Previous button
+              if ($current_page > 1) {
+                $prev_page = $current_page - 1;
+                if ($prev_page == 1) {
+                  $prev_url = $base_url;
+                } else {
+                  $prev_url = add_query_arg('paged', $prev_page, $base_url);
+                }
+                if (!empty($current_category)) {
+                  $prev_url = add_query_arg('product_cat', $current_category, $prev_url);
+                }
+                echo '<li><a href="' . esc_url($prev_url) . '">&laquo; Previous</a></li>';
+              }
+              
+              // Page numbers
+              $start = max(1, $current_page - 2);
+              $end = min($max_pages, $current_page + 2);
+              
+              if ($start > 1) {
+                $page_1_url = $base_url;
+                if (!empty($current_category)) {
+                  $page_1_url = add_query_arg('product_cat', $current_category, $page_1_url);
+                }
+                echo '<li><a href="' . esc_url($page_1_url) . '">1</a></li>';
+                if ($start > 2) {
+                  echo '<li><span>...</span></li>';
+                }
+              }
+              
+              for ($i = $start; $i <= $end; $i++) {
+                if ($i == $current_page) {
+                  echo '<li><span class="current">' . $i . '</span></li>';
+                } else {
+                  if ($i == 1) {
+                    $page_url = $base_url;
+                  } else {
+                    $page_url = add_query_arg('paged', $i, $base_url);
+                  }
+                  if (!empty($current_category)) {
+                    $page_url = add_query_arg('product_cat', $current_category, $page_url);
+                  }
+                  echo '<li><a href="' . esc_url($page_url) . '">' . $i . '</a></li>';
+                }
+              }
+              
+              if ($end < $max_pages) {
+                if ($end < $max_pages - 1) {
+                  echo '<li><span>...</span></li>';
+                }
+                $page_last_url = add_query_arg('paged', $max_pages, $base_url);
+                if (!empty($current_category)) {
+                  $page_last_url = add_query_arg('product_cat', $current_category, $page_last_url);
+                }
+                echo '<li><a href="' . esc_url($page_last_url) . '">' . $max_pages . '</a></li>';
+              }
+              
+              // Next button
+              if ($current_page < $max_pages) {
+                $next_page = $current_page + 1;
+                $next_url = add_query_arg('paged', $next_page, $base_url);
+                if (!empty($current_category)) {
+                  $next_url = add_query_arg('product_cat', $current_category, $next_url);
+                }
+                echo '<li><a href="' . esc_url($next_url) . '">Next &raquo;</a></li>';
+              }
+              ?>
+            </ul>
           </div>
         <?php endif; ?>
         

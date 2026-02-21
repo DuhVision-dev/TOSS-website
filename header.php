@@ -58,14 +58,14 @@
               <ul class="alt-sub-nav-links">
                 <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/co2-laser-1410')); ?>" class="alt-mobile-sub-link">1410</a></li>
                 <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/co2-laser-26')); ?>" class="alt-mobile-sub-link">1325</a></li>
-                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/co2-laser-1530')); ?>" class="alt-mobile-sub-link">1530</a></li>
+                <!-- <li class="alt-sub-items"><a href="<//?php echo esc_url(home_url('/product/co2-laser-1530')); ?>" class="alt-mobile-sub-link">1530</a></li> -->
               </ul>
             <!-- Sub-nav-list -->
             </div><div class="alt-sub-nav">
-              <a href="<?php echo esc_url(add_query_arg('product_cat', 'fiber-metal-laser', home_url('/products'))); ?>" class="alt-mobile-link">Fiber Metal Laser</a>
+              <a href="<?php echo esc_url(add_query_arg('product_cat', 'fiber-metal-laser', home_url('/products'))); ?>" class="alt-mobile-link">Fiber Metal Cutting Machine</a>
               <ul class="alt-sub-nav-links">
                 <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/fiber-metal-laser-1530')); ?>" class="alt-mobile-sub-link">1530</a></li>
-                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/fiber-metal-laser-2040')); ?>" class="alt-mobile-sub-link">2040</a></li>
+                <!-- <li class="alt-sub-items"><a href="<//?php echo esc_url(home_url('/product/fiber-metal-laser-2040')); ?>" class="alt-mobile-sub-link">2040</a></li> -->
               </ul>
             <!-- Sub-nav-list -->
             </div><div class="alt-sub-nav">
@@ -128,15 +128,15 @@
         
         
         <div class="alt-mobile-dropdown">
-          <button class="alt-mobile-link alt-mobile-nav-head alt-mobile-dropdown-toggle">Industries
+          <button class="alt-mobile-link alt-mobile-nav-head alt-mobile-dropdown-toggle"><a href="<?php echo esc_url(home_url('/industries')); ?>">Industries</a> 
             <img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/icons/dropdown-icon.svg" alt="">
           </button>
           <div class="alt-mobile-dropdown-menu">
             <a href="<?php echo esc_url(home_url('/industries/automobile')); ?>" class="alt-mobile-link">Automobile</a>
             <a href="<?php echo esc_url(home_url('/industries/interior')); ?>" class="alt-mobile-link">Interior</a>
             <a href="<?php echo esc_url(home_url('/industries/engineering')); ?>" class="alt-mobile-link">Engineering</a>
-            <a href="<?php echo esc_url(home_url('/industries/manufacturing')); ?>" class="alt-mobile-link">Manufacturing</a>
-            <a href="<?php echo esc_url(home_url('/industries/electronics')); ?>" class="alt-mobile-link">Electronics</a>
+            <!-- <a href="<?php echo esc_url(home_url('/industries/manufacturing')); ?>" class="alt-mobile-link">Manufacturing</a> -->
+            <!-- <a href="<?php echo esc_url(home_url('/industries/electronics')); ?>" class="alt-mobile-link">Electronics</a> -->
             <a href="<?php echo esc_url(home_url('/industries/tooling')); ?>" class="alt-mobile-link">Tooling</a>
           </div>
         </div>
@@ -223,7 +223,7 @@
                     <ul class="accordion-panel">
                       <li><a href="<?php echo esc_url(home_url('/product/wood-working-1325')); ?>">1325</a></li>
                       <li><a href="<?php echo esc_url(home_url('/product/wood-working-1530')); ?>">1530</a></li>
-                      <li><a href="<?php echo esc_url(home_url('/product/wood-working-1560')); ?>">1560</a></li>
+                      <li><a href="<?php echo esc_url(home_url('/product/wood-working-2030')); ?>">2030</a></li>
                     </ul>
                   </li>
 
@@ -238,12 +238,11 @@
                     <ul class="accordion-panel">
                       <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1325')); ?>">1325</a></li>
                       <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1530')); ?>">1530</a></li>
-                      <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1560')); ?>">1560</a></li>
                     </ul>
                   </li>
 
                   <!-- Item 3 -->
-                  <li class="accordion-item">
+                  <!-- <li class="accordion-item">
                     <button class="accordion-trigger">
                       4-Axis
                       <span class="accordion-icon">
@@ -251,21 +250,20 @@
                       </span>
                     </button>
                     <ul class="accordion-panel">
-                      <li><a href="<?php echo esc_url(home_url('/product/4-axis-router-1530')); ?>">1530</a></li>
-                      <li><a href="<?php echo esc_url(home_url('/product/4-axis-1550')); ?>">1550</a></li>
+                      <li><a href="<//?php echo esc_url(home_url('/product/4-axis-router-1530')); ?>">1530</a></li>
+                      <li><a href="<//?php echo esc_url(home_url('/product/4-axis-1550')); ?>">1550</a></li>
                     </ul>
-                  </li>
+                  </li> -->
 
-                  <li><a href="<?php echo esc_url(home_url('/product/5-axis-router')); ?>">5-Axis Router</a></li>
+                  <!-- <li><a href="<//?php echo esc_url(home_url('/product/5-axis-router')); ?>">5-Axis Router</a></li> -->
 
             </ul>
 
-            <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'stone-working', home_url('/products'))); ?>">Stone Working</a></h4>
-            <ul>
-              <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1325')); ?>">1325</a></li>
-              <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1530')); ?>">1530</a></li>
-              <li><a href="<?php echo esc_url(home_url('/product/stone-working-router-1560')); ?>">1560</a></li>
-            </ul>
+            <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'spot-welding', home_url('/products'))); ?>">Spot Welding</a></h4>
+          <ul>
+            <li><a href="<?php echo esc_url(home_url('/product/spot-welding-300w')); ?>">300W</a></li>
+            <li><a href="<?php echo esc_url(home_url('/product/spot-welding-500w')); ?>">500W</a></li>
+          </ul>
         </div>
 
         <div class="mega-col">
@@ -273,7 +271,7 @@
           <ul>
             <li><a href="<?php echo esc_url(home_url('/product/co2-laser-1410')); ?>">1410</a></li>
             <li><a href="<?php echo esc_url(home_url('/product/co2-laser-26')); ?>">1325</a></li>
-            <li><a href="<?php echo esc_url(home_url('/product/co2-laser-1530')); ?>">1530</a></li>
+            <!-- <li><a href="<//?php echo esc_url(home_url('/product/co2-laser-1530')); ?>">1530</a></li> -->
           </ul>
 
           <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'co2-marker', home_url('/products'))); ?>">CO2 Marker</a></h4>
@@ -282,18 +280,18 @@
             <li><a href="<?php echo esc_url(home_url('/product/co2-marker-200-x-200')); ?>">200 × 200</a></li>
           </ul>
 
-          <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'spot-welding', home_url('/products'))); ?>">Spot Welding</a></h4>
+          <!-- <h4><a href="<//?php echo esc_url(add_query_arg('product_cat', 'spot-welding', home_url('/products'))); ?>">Spot Welding</a></h4>
           <ul>
-            <li><a href="<?php echo esc_url(home_url('/product/spot-welding-300w')); ?>">300W</a></li>
-            <li><a href="<?php echo esc_url(home_url('/product/spot-welding-500w')); ?>">500W</a></li>
-          </ul>
+            <li><a href="<//?php echo esc_url(home_url('/product/spot-welding-300w')); ?>">300W</a></li>
+            <li><a href="<//?php echo esc_url(home_url('/product/spot-welding-500w')); ?>">500W</a></li>
+          </ul> -->
         </div>
 
         <div class="mega-col">
-          <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'fiber-metal-laser', home_url('/products'))); ?>">Fiber Metal Laser</a></h4>
+          <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'fiber-metal-laser', home_url('/products'))); ?>">Fiber Metal Cutting Machine</a></h4>
           <ul>
             <li><a href="<?php echo esc_url(home_url('/product/fiber-metal-laser-1530')); ?>">1530</a></li>
-            <li><a href="<?php echo esc_url(home_url('/product/fiber-metal-laser-2040')); ?>">2040</a></li>
+            <!-- <li><a href="<//?php echo esc_url(home_url('/product/fiber-metal-laser-2040')); ?>">2040</a></li> -->
           </ul>
 
           <h4><a href="<?php echo esc_url(add_query_arg('product_cat', 'fiber-laser-welding', home_url('/products'))); ?>">Fiber Laser Welding</a></h4>
@@ -322,9 +320,9 @@
     </div>
   </div>
 
-      <div class="nav-item has-dropdown" >
+      <div class="nav-item has-dropdown " >
 
-        <a href="<?php echo esc_url(home_url('#')); ?>" class="nav-link">
+        <a href="<?php echo esc_url(home_url('/industries')); ?>" class="nav-link">
           Industries
         </a>
 
@@ -333,8 +331,8 @@
           <a href="<?php echo esc_url(home_url('/industries/automobile')); ?>">Automobile</a>
           <a href="<?php echo esc_url(home_url('/industries/interior')); ?>">Interior</a>
           <a href="<?php echo esc_url(home_url('/industries/engineering')); ?>">Engineering</a>
-          <a href="<?php echo esc_url(home_url('/industries/manufacturing')); ?>">Manufacturing</a>
-          <a href="<?php echo esc_url(home_url('/industries/electronics')); ?>">Electronics</a>
+          <!-- <a href="<?php echo esc_url(home_url('/industries/manufacturing')); ?>">Manufacturing</a> -->
+          <!-- <a href="<?php echo esc_url(home_url('/industries/electronics')); ?>">Electronics</a> -->
           <a href="<?php echo esc_url(home_url('/industries/tooling')); ?>">Tooling</a>
         </div>
 
@@ -346,7 +344,7 @@
     <div class="nav-btns">
       
     <?php
-    $text = 'Call Us Now';
+    $text = 'Call Us At +91 8851471671';
     $url = home_url('/contact');
     $type = 'primary';
     include get_template_directory() . '/components/button.php';

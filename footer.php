@@ -55,9 +55,10 @@
       <div class="footer-col">
         <h3 class="footer-heading">Contact</h3>
         <ul class="footer-contact">
-          <li><a href="mailto:email-id@gmail.com">email-id@gmail.com</a></li>
-          <li><a href="tel:+919988776655">+91 9988776655</a></li>
-          <li>779 Elliot Cape, Vonfield 59056</li>
+          <li><a href="mailto:email-id@gmail.com">cnctoss@gmail.com</a></li>
+          <li><a href="tel:+918851471671">+91 88514 71671</a></li>
+          <li><a href="tel:+919540828354">+91 95408 28354</a></li>
+          <li>F577+R94, Radhey Mohan Dr, Jona Pur, Jaunapur, New Delhi, Delhi 110074</li>
         </ul>
       </div>
 
@@ -65,14 +66,14 @@
 
     <!-- Footer Middle - Policy Links -->
     <div class="footer-middle">
-      <div class="policy-links">
+      <!-- <div class="policy-links">
         <a href="#">Policy Links</a>
         <a href="#">Policy Links</a>
         <a href="#">Policy Links</a>
         <a href="#">Policy Links</a>
         <a href="#">Policy Links</a>
         <a href="#">Policy Links</a>
-      </div>
+      </div> -->
     </div>
 
 

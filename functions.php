@@ -119,6 +119,35 @@ function toss_enqueue_assets() {
 add_action('wp_enqueue_scripts', 'toss_enqueue_assets');
 
 /**
+ * Add rewrite rule for products page pagination
+ */
+function toss_add_products_page_rewrite_rule() {
+  $products_page = get_pages(array(
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'pages/page-products.php'
+  ));
+  
+  if (!empty($products_page)) {
+    $products_page_slug = $products_page[0]->post_name;
+    add_rewrite_rule(
+      '^' . $products_page_slug . '/page/?([0-9]{1,})/?$',
+      'index.php?pagename=' . $products_page_slug . '&paged=$matches[1]',
+      'top'
+    );
+  }
+}
+add_action('init', 'toss_add_products_page_rewrite_rule');
+
+/**
+ * Also support the 'page' query variable for custom page pagination
+ */
+function toss_register_pagination_query_var($qvars) {
+  $qvars[] = 'paged';
+  return $qvars;
+}
+add_filter('query_vars', 'toss_register_pagination_query_var');
+
+/**
  * Get the products page URL
  */
 function toss_get_products_page_url() {

@@ -16,25 +16,11 @@ get_header();
             Built to deliver consistency, fine detail, and reliable performance in electronics production.
           </p>
 
-          <div class="hero-btns">
-          <?php 
-          $text = 'Call Us Now';
-          $url = home_url('/contact');
-          $type = 'primary';
-          include get_template_directory() . '/components/button.php';
-          ?>
-
-          <?php $text = 'View Our Products';
-          $text = 'View Our Products';
-          $url = home_url('/products');
-          $type = 'secondary';
-          include get_template_directory() . '/components/button.php';
-          ?>
-        </div>
+          
         </div>
         
         <div class="hero-image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industries/electronics.png" alt="Electronics Industry Hero Image">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industries/webp/electronics.webp" alt="Electronics Industry Hero Image">
         </div>
         
       </div>

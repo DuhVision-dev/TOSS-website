@@ -61,11 +61,11 @@ body { background: white; }
 
 h2{
     color: var(--color-black);
-    font-size: 64px ;
+    font-size: 56px ;
     font-family: var(--font-heading);
     font-weight: 400;
     line-height: 100%;
-    margin-bottom: 48px;
+    margin-bottom: 28px;
 }
 
 
