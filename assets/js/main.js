@@ -162,31 +162,38 @@ const altMobileDropdowns = document.querySelectorAll('.alt-mobile-dropdown');
 altMobileDropdowns.forEach(dropdown => {
   const toggleBtn = dropdown.querySelector('.alt-mobile-dropdown-toggle');
   const menu = dropdown.querySelector('.alt-mobile-dropdown-menu');
-  
-  if (!toggleBtn || !menu) return;
-  
+  const arrowImg = toggleBtn.querySelector('img');
+  if (!toggleBtn || !menu || !arrowImg) return;
   toggleBtn.addEventListener('click', () => {
     const isOpen = dropdown.classList.contains('is-open');
-    
+    const isProducts = menu.classList.contains('products-dropdown');
+    const isIndustries = menu.classList.contains('industries-dropdown');
     if (isOpen) {
-      // Close dropdown
       menu.style.height = menu.scrollHeight + 'px';
-      // Force reflow
       menu.offsetHeight;
       menu.style.height = '0';
       menu.style.overflow = 'hidden';
       dropdown.classList.remove('is-open');
+      // Animate arrow back to 0deg
+      gsap.to(arrowImg, { rotate: 0, duration: 0.4, ease: 'power2.out' });
     } else {
-      // Open dropdown
       dropdown.classList.add('is-open');
-      menu.style.overflow = 'hidden';
-      
-      // Use requestAnimationFrame to ensure browser calculates scrollHeight
-      requestAnimationFrame(() => {
-        const height = menu.scrollHeight;
-        menu.style.height = height + 'px';
-        
-        // After transition, set to auto and visible
+      // Animate arrow to 180deg
+      gsap.to(arrowImg, { rotate: 180, duration: 0.4, ease: 'power2.out' });
+      if (isProducts) {
+        menu.style.overflow = 'auto';
+        menu.style.height = '70vh';
+        const handleTransitionEnd = () => {
+          if (dropdown.classList.contains('is-open')) {
+            menu.style.height = '70vh';
+            menu.style.overflow = 'auto';
+          }
+          menu.removeEventListener('transitionend', handleTransitionEnd);
+        };
+        menu.addEventListener('transitionend', handleTransitionEnd);
+      } else if (isIndustries) {
+        menu.style.overflow = 'visible';
+        menu.style.height = menu.scrollHeight + 'px';
         const handleTransitionEnd = () => {
           if (dropdown.classList.contains('is-open')) {
             menu.style.height = 'auto';
@@ -194,9 +201,8 @@ altMobileDropdowns.forEach(dropdown => {
           }
           menu.removeEventListener('transitionend', handleTransitionEnd);
         };
-        
         menu.addEventListener('transitionend', handleTransitionEnd);
-      });
+      }
     }
   });
 });

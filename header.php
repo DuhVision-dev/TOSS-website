@@ -32,7 +32,7 @@
           <button class="alt-mobile-link alt-mobile-nav-head alt-mobile-dropdown-toggle">Products
             <img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/icons/dropdown-icon.svg" alt="">
           </button>  
-          <div class="alt-mobile-dropdown-menu">
+          <div class="alt-mobile-dropdown-menu products-dropdown">
             <!-- Sub-nav-list -->
             <div class="alt-sub-nav">
               <a href="<?php echo esc_url(add_query_arg('product_cat', 'routers', home_url('/products'))); ?>" class="alt-mobile-link">Routers</a>
@@ -40,16 +40,10 @@
                 <li class="alt-sub-items"><a href="<?php echo esc_url(add_query_arg('product_cat', 'wood-working', home_url('/products'))); ?>" class="alt-mobile-sub-link">Wood Working</a></li>
                 <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/wood-working-1325')); ?>" class="alt-mobile-sub-link">1325</a></li>
                 <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/wood-working-1530')); ?>" class="alt-mobile-sub-link">1530</a></li>
-                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/wood-working-1560')); ?>" class="alt-mobile-sub-link">1560</a></li>
+                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/wood-working-2030')); ?>" class="alt-mobile-sub-link">2030</a></li>
                 <li class="alt-sub-items"><a href="<?php echo esc_url(add_query_arg('product_cat', 'stone-working', home_url('/products'))); ?>" class="alt-mobile-sub-link">Stone Working</a></li>
                 <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/stone-working-router-1325')); ?>" class="alt-mobile-sub-link">1325</a></li>
                 <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/stone-working-router-1530')); ?>" class="alt-mobile-sub-link">1530</a></li>
-                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/stone-working-router-1560')); ?>" class="alt-mobile-sub-link">1560</a></li>
-                <li class="alt-sub-items"><a href="<?php echo esc_url(add_query_arg('product_cat', '4-axis', home_url('/products'))); ?>" class="alt-mobile-sub-link">4-Axis</a></li>
-                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/4-axis-router-1530')); ?>" class="alt-mobile-sub-link">1530</a></li>
-                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/4-axis-1550')); ?>" class="alt-mobile-sub-link">1550</a></li>
-                <li class="alt-sub-items"><a href="<?php echo esc_url(add_query_arg('product_cat', '5-axis', home_url('/products'))); ?>" class="alt-mobile-sub-link">5-Axis</a></li>
-                <li class="alt-sub-items"><a href="<?php echo esc_url(home_url('/product/5-axis-router')); ?>" class="alt-mobile-sub-link">5-Axis Router</a></li>
               </ul>
             </div>
             <!-- Sub-nav-list -->
@@ -128,10 +122,10 @@
         
         
         <div class="alt-mobile-dropdown">
-          <button class="alt-mobile-link alt-mobile-nav-head alt-mobile-dropdown-toggle"><a href="<?php echo esc_url(home_url('/industries')); ?>">Industries</a> 
+          <button class="alt-mobile-link alt-mobile-nav-head alt-mobile-dropdown-toggle">Industries 
             <img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/icons/dropdown-icon.svg" alt="">
           </button>
-          <div class="alt-mobile-dropdown-menu">
+          <div class="alt-mobile-dropdown-menu industries-dropdown">
             <a href="<?php echo esc_url(home_url('/industries/automobile')); ?>" class="alt-mobile-link">Automobile</a>
             <a href="<?php echo esc_url(home_url('/industries/interior')); ?>" class="alt-mobile-link">Interior</a>
             <a href="<?php echo esc_url(home_url('/industries/engineering')); ?>" class="alt-mobile-link">Engineering</a>

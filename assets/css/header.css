@@ -343,11 +343,25 @@ body {
 
   .site-header{
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
+  }
+  /* Restore nav-list to default, apply scroll to dropdown menu only */
+  .alt-mobile-nav-list {
+    overflow: visible;
+    max-height: none;
+  }
+  /* Products dropdown: scrollable */
+  .alt-mobile-dropdown-menu.products-dropdown {
+    max-height: 70vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: height 0.3s ease-in-out;
+  }
+  /* Industries dropdown: auto height */
+  .alt-mobile-dropdown-menu.industries-dropdown {
+    max-height: none;
+    overflow-y: visible;
+    transition: height 0.3s ease-in-out;
+  }
   .header-inner {
     margin: 0 32px;
   }
@@ -387,6 +401,11 @@ body {
     transition: height 0.3s ease-in-out;
 }
 
+.header-inner {
+    margin: 0 16px;
+    padding: 1rem 0;
+  }
+
 }
 
 
@@ -394,6 +413,7 @@ body {
 
   .header-inner {
     margin: 0 16px;
+    padding: 1rem 0;
   }
   
   .alt-mobile-nav{

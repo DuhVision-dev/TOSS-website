@@ -356,12 +356,12 @@
   
   .parameter-name {
     padding-bottom: 8px;
-    border-bottom: 1px solid #e0e0e0;
+    /* border-bottom: 1px solid #e0e0e0; */
   }
   
   .parameter-value {
     padding-top: 8px;
-    background: #fff;
+    /* background: #fff; */
   }
 }
 
