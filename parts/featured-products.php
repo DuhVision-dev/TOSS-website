@@ -16,7 +16,7 @@
             <div class="product-card-content">
               <h3 class="product-card-title">Routers Machines</h3>
               <?php $text = 'Learn More';
-              $url = home_url('#');
+              $url = home_url('/products/?product_cat=routers');
               $type = 'primary';
               include get_template_directory() . '/components/button.php';
               ?>
@@ -29,7 +29,7 @@
             <div class="product-card-content">
               <h3 class="product-card-title">Co2 Laser Machines</h3>
               <?php $text = 'Learn More';
-              $url = home_url('#');
+              $url = home_url('/products/?product_cat=co2-laser');
               $type = 'primary';
               include get_template_directory() . '/components/button.php';
               ?>
@@ -42,7 +42,7 @@
             <div class="product-card-content">
               <h3 class="product-card-title">Fiber Metal Laser Machine</h3>
               <?php $text = 'Learn More';
-              $url = home_url('#');
+              $url = home_url('/products/?product_cat=fiber-metal-laser');
               $type = 'primary';
               include get_template_directory() . '/components/button.php';
               ?>
@@ -55,7 +55,7 @@
             <div class="product-card-content">
               <h3 class="product-card-title">Channel Letter Bending Machine</h3>
               <?php $text = 'Learn More'; 
-              $url = home_url('#');
+              $url = home_url('/products/?product_cat=channel-letter-bending');
               $type = 'primary'; 
               include get_template_directory() . '/components/button.php';
               ?>

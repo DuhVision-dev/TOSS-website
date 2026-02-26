@@ -338,11 +338,13 @@
     <div class="nav-btns">
       
     <?php
-    $text = 'Call Us At +91 8851471671';
-    $url = home_url('/contact');
-    $type = 'primary';
-    include get_template_directory() . '/components/button.php';
-    ?>
+$phone = '+918851471671';
+$text  = 'Call Us At +91 8851471671';
+$url   = 'tel:' . $phone;
+$type  = 'primary';
+
+include get_template_directory() . '/components/button.php';
+?>
 
 
         
