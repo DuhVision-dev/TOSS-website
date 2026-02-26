@@ -182,6 +182,7 @@ function toss_handle_inquiry_form() {
   }
 
   // Sanitize and validate inputs
+    // === SMTP CONFIGURATION FOR wp_mail ===
   $name = sanitize_text_field($_POST['name'] ?? '');
   $company = sanitize_text_field($_POST['company'] ?? '');
   $email = sanitize_email($_POST['email'] ?? '');
@@ -193,6 +194,7 @@ function toss_handle_inquiry_form() {
   if (empty($name) || empty($company) || empty($email) || empty($phone) || empty($working_area) || empty($message)) {
     wp_send_json_error(array('message' => 'Please fill in all required fields.'));
     return;
+    // === END SMTP CONFIGURATION ===
   }
 
   // Validate email
@@ -204,7 +206,7 @@ function toss_handle_inquiry_form() {
   // ========================================
   // CHANGE THIS TO YOUR EMAIL ADDRESS
   // ========================================
-  $to = 'your-email@example.com';  // ← CHANGE THIS!
+  $to = 'akshat@duhvision.com';  // ← CHANGE THIS!
   
   $subject = 'New Inquiry from ' . $name . ' - ' . $company;
   
