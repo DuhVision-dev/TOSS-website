@@ -4,3 +4,6 @@ node_modules
 
 CONTACT_FORM_SETUP.md
 PRODUCTS_PAGE_SETUP.md
+
+# Ignore SMTP credentials
+smtp-config.php
