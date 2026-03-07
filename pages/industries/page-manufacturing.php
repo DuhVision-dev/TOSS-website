@@ -16,21 +16,7 @@ get_header();
 Designed for reliability, accuracy, and consistent output in daily factory use.
           </p>
 
-          <div class="hero-btns">
-          <?php 
-          $text = 'Call Us Now';
-          $url = home_url('/contact');
-          $type = 'primary';
-          include get_template_directory() . '/components/button.php';
-          ?>
-
-          <?php $text = 'View Our Products';
-          $text = 'View Our Products';
-          $url = home_url('/products');
-          $type = 'secondary';
-          include get_template_directory() . '/components/button.php';
-          ?>
-        </div>
+         
         </div>
         
         <div class="hero-image">

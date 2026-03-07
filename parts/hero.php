@@ -24,21 +24,21 @@
           include get_template_directory() . '/components/button.php';
           ?>
 
-          <?php $text = 'View Our Products';
+          <!-- <//?php $text = 'View Our Products';
           $text = 'View Our Products';
           $url = home_url('/products');
           $type = 'secondary';
           include get_template_directory() . '/components/button.php';
-          ?>
+          ?> -->
       </div>
 
     </div>
 
 
 
-    <div class="hero-image">
+    <!-- <div class="hero-image">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/hero/hero-image.webp" alt="">
-    </div>
+    </div> -->
 
   </div>
 </section>

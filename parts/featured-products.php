@@ -11,7 +11,14 @@
         <div class="carousel-track">
           <div class="carousel-card">
             <div class="product-card-image">
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/router.webp'; ?>" alt="Routers Machines">
+              <img 
+                src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/router.webp'; ?>" 
+                alt="Routers Machines"
+                loading="lazy"
+                width="500"
+                height="400"
+                decoding="async"
+              >
             </div>
             <div class="product-card-content">
               <h3 class="product-card-title">Routers Machines</h3>
@@ -24,7 +31,14 @@
           </div>
           <div class="carousel-card">
             <div class="product-card-image">
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/co2-laser-machine.webp'; ?>" alt="Routers Machines">
+              <img 
+                src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/co2-laser-machine.webp'; ?>" 
+                alt="Co2 Laser Machines"
+                loading="lazy"
+                width="500"
+                height="400"
+                decoding="async"
+              >
             </div>
             <div class="product-card-content">
               <h3 class="product-card-title">Co2 Laser Machines</h3>
@@ -37,7 +51,14 @@
           </div>
           <div class="carousel-card">
             <div class="product-card-image">
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/fiber-laser-machine.webp'; ?>" alt="Routers Machines">
+              <img 
+                src="<?php echo get_template_directory_uri() . '/assets/images/home/featured-products/fiber-laser-machine.webp'; ?>" 
+                alt="Fiber Metal Laser Machine"
+                loading="lazy"
+                width="500"
+                height="400"
+                decoding="async"
+              >
             </div>
             <div class="product-card-content">
               <h3 class="product-card-title">Fiber Metal Laser Machine</h3>

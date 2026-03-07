@@ -7,7 +7,7 @@ html, body { height: 100%; }
 body { 
     
     font-family: var(--font-body); 
-    background-color: white;
+    background-color: #FCFCFF;
     color: #060410; 
     line-height: 1.4; 
 }
@@ -16,7 +16,7 @@ h1,h2,h3,h4,h5,h6 { font-weight: 400; }
 
 h1 {
     font-family: var(--font-heading);
-    font-size: 80px;
+    font-size: 56px;
     line-height: 110%;
     /* margin-bottom: 24px; */
     color: var(--color-head);
@@ -40,6 +40,7 @@ p{
 img{
     width: 100%;
     height: auto;
+    display: block;
 }
 
 button{

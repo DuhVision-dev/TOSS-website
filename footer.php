@@ -58,7 +58,7 @@
           <li><a href="mailto:email-id@gmail.com">cnctoss@gmail.com</a></li>
           <li><a href="tel:+918851471671">+91 88514 71671</a></li>
           <li><a href="tel:+919540828354">+91 95408 28354</a></li>
-          <li>F577+R94, Radhey Mohan Dr, Jona Pur, Jaunapur, New Delhi, Delhi 110074</li>
+          <li>F-58, Radhey Mohan Drive, Jonapur, Jaunapur, New Delhi - 110074</li>
         </ul>
       </div>
 

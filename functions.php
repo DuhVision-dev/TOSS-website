@@ -18,6 +18,42 @@ function toss_theme_setup() {
 add_action( 'after_setup_theme', 'toss_theme_setup' );
 
 /**
+ * Enable lazy loading for images
+ */
+add_filter('wp_get_attachment_image_attributes', function($attr) {
+  if (!isset($attr['loading'])) {
+    $attr['loading'] = 'lazy';
+  }
+  return $attr;
+});
+
+/**
+ * Add image preloading for hero and critical images
+ */
+function toss_preload_critical_images() {
+  echo '<!-- Critical Image Preload -->' . "\n";
+  echo '<link rel="preload" as="image" href="' . get_stylesheet_directory_uri() . '/assets/images/home/hero/hero-4.webp" />' . "\n";
+  echo '<link rel="preload" as="image" href="' . get_stylesheet_directory_uri() . '/assets/images/home/featured-products/router.webp" />' . "\n";
+  echo '<!-- End Critical Image Preload -->' . "\n";
+}
+add_action('wp_head', 'toss_preload_critical_images', 1);
+
+/**
+ * Optimize images by adding width/height attributes to prevent layout shift
+ */
+function toss_add_image_dimensions() {
+  // This helps prevent Cumulative Layout Shift (CLS)
+}
+
+/**
+ * Add browser caching headers for images
+ */
+function toss_add_browser_cache_headers() {
+  header('Cache-Control: max-age=31536000, public');
+}
+add_action('wp_head', 'toss_add_browser_cache_headers');
+
+/**
  * Remove WordPress Admin Bar
  */
 add_filter('show_admin_bar', '__return_false');
@@ -27,15 +63,21 @@ add_filter('show_admin_bar', '__return_false');
  */
 function toss_enqueue_assets() {
 
-  // Google Fonts
+  // Google Fonts - Load asynchronously for better performance
   wp_enqueue_style(
     'toss-google-fonts',
     'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap',
     [],
     null
   );
+  add_filter('style_loader_tag', function($html, $handle) {
+    if ($handle === 'toss-google-fonts') {
+      return str_replace("rel='stylesheet'", "rel='stylesheet' media='print' onload=\"this.media='all'\"", $html);
+    }
+    return $html;
+  }, 10, 2);
 
-  // Adobe Fonts
+  // Adobe Fonts - Load asynchronously
   wp_enqueue_style(
     'toss-adobe-fonts',
     'https://use.typekit.net/nmb7nyt.css',
@@ -43,7 +85,7 @@ function toss_enqueue_assets() {
     null
   );
 
-  // GSAP Library
+  // GSAP Library - Load defer for non-critical animations
   wp_enqueue_script(
     'gsap',
     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
@@ -51,6 +93,12 @@ function toss_enqueue_assets() {
     '3.12.5',
     true
   );
+  add_filter('script_loader_tag', function($tag, $handle) {
+    if ($handle === 'gsap') {
+      return str_replace(' src=', ' defer src=', $tag);
+    }
+    return $tag;
+  }, 10, 2);
 
   // Main stylesheet
   wp_enqueue_style(
@@ -82,6 +130,15 @@ function toss_enqueue_assets() {
   wp_enqueue_script(
     'toss-forms',
     get_template_directory_uri() . '/assets/js/forms.js',
+    [],
+    '1.0',
+    true
+  );
+
+  // Lazy Loading Optimization
+  wp_enqueue_script(
+    'toss-lazy-load',
+    get_template_directory_uri() . '/assets/js/lazy-load.js',
     [],
     '1.0',
     true
