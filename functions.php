@@ -7,6 +7,9 @@
  * Theme Setup
  */
 function toss_theme_setup() {
+  // Add theme support for dynamic title tag
+  add_theme_support( 'title-tag' );
+  
   // Add WooCommerce support
   add_theme_support( 'woocommerce' );
   
@@ -16,6 +19,16 @@ function toss_theme_setup() {
   add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', 'toss_theme_setup' );
+
+/**
+ * Filter document title parts for dynamic page titles
+ */
+function toss_document_title_parts( $parts ) {
+  $parts['site'] = get_bloginfo( 'name' );
+  $parts['tagline'] = get_bloginfo( 'description' );
+  return $parts;
+}
+add_filter( 'document_title_parts', 'toss_document_title_parts' );
 
 /**
  * Enable lazy loading for images
